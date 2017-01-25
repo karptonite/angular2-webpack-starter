@@ -1,0 +1,5 @@
+.game-header-image {
+	@include media-breakpoint-down(sm) {
+		content: '';
+	}
+}
