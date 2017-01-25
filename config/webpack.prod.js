@@ -105,7 +105,7 @@ module.exports = function (env) {
           test: /\.scss$/,
           loader: ExtractTextPlugin.extract({
               fallbackLoader: 'style-loader',
-              loader: 'css-loader!sass-loader'
+              loader: 'css-loader!resolve-url-loader!sass-loader?sourceMap'
             }),
           include: [helpers.root('src', 'styles')]
         },
@@ -273,6 +273,12 @@ module.exports = function (env) {
         minimize: true,
         debug: false,
         options: {
+
+          context: helpers.root('src'),  
+          output: { path :  './' },
+          sassLoader: {
+            includePaths: [helpers.root('src')]
+          },
 
           /**
            * Html loader advanced options
