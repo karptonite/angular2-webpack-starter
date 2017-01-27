@@ -4,4 +4,4 @@ To reproduce, clone this repo, then run:
 `npm install`
 `npm build:prod`
 
-You will see an error message unrelated to the qoutes, but changing the single quotes to double qoutes in `_test.scss` will fix the issue.
+You will see an error message unrelated to the quotes, but changing the single quotes to double qoutes in `_test.scss` will fix the issue.
