@@ -1,12 +1,17 @@
 /* this file will be extracted to main dist folder and is imported in index.html */
 /* This file is for setting global styles  */
-@import 'variables';
+@import "~bootstrap/scss/bootstrap";
+@import "variables";
 
 nav {
   margin-top: 16px;
 }
 
 nav a {
+  @include media-breakpoint-down(sm) {
+    content: 'foo';
+    color: black;
+  }
   background-color: $nav-button-color;
   color: white;
   padding: 8px 16px;
